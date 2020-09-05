@@ -16,13 +16,9 @@ A PyTorch implementation of "Separating Sounds from a Single Image". Authors: [L
 # Environment
 	Python>=3.5, PyTorch>=0.4.0
 
-# Preparing the data
-	# Place the csv file lists under the folder data 
-<!--	data/
-			musicall_TrainS335_D65_f8fps_11k.csv
-			musicall_ValValS100_f8fps_11k.csv
-			musicall_ValTestS130_f8fps_11k.csv
--->
+# Preparing the data (not released yet, you can train the model on your own dataset for now by setting the following info)
+	# Place the csv file lists under the folder data, the csv file has the format as below: 
+		audio_path, frames_path, frames count
 	# Edit the dataset path at line 163 of file dataset/music.py
 		
 
@@ -38,16 +34,18 @@ Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh to switch t
 	-Uncomment the line of "CUDA_VISIBLE_DEVICES="0" python -u main_Appearance_att_Sound.py $OPTS" in scripts/train_locSep.sh to start the training.
 
 	# Training the A(Ground Category Emb) + S(DV3P) model
-	-Uncomment the line of "CUDA_VISIBLE_DEVICES="0" python -u main_GCEmb_Sound.py $OPTS" scripts/train_locSep.sh to start the training.
+	-Uncomment the line of "CUDA_VISIBLE_DEVICES="0" python -u main_GCEmb_Sound.py $OPTS" in scripts/train_locSep.sh to start the training.
 
 
 # Evaluation
+	# Ajust accordingly based on the selected model
 	./scripts/eval_locSep.sh
 
 
 # Reference
 
 [1] Zhao, Hang, et al. "The sound of pixels." Proceedings of the European conference on computer vision (ECCV). 2018.
+
 [2] Arandjelovic, Relja, and Andrew Zisserman. "Objects that sound." Proceedings of the European Conference on Computer Vision (ECCV). 2018.
 
 ## Citation
