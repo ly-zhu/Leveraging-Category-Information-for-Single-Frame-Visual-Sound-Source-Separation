@@ -16,14 +16,15 @@ A PyTorch implementation of "Separating Sounds from a Single Image". Authors: [L
 # Environment
 	Python>=3.5, PyTorch>=0.4.0
 
-# Preparing the data (not released yet, you can train the model on your own dataset for now by setting the following info)
-	# Place the csv file lists under the folder data, the csv file has the format as below: 
+# Preparing the data
+Not released yet, but you can train the model on your own dataset for now by setting the following info:
+	-Place the csv file lists under the folder data/, the csv file has the format as below: 
 		audio_path, frames_path, frames count
-	# Edit the dataset path at line 163 of file dataset/music.py
+	-Edit the dataset path at line 163 of file dataset/music.py
 		
 
 # Model selection
-Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh to switch to diffeent appearance and sound networks.
+Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh and scripts/eval_locSep.sh to switch to diffeent appearance and sound networks.
 
 # Training
 	# Training the A(Res-50) + S(DV3P) model

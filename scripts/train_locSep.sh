@@ -3,9 +3,9 @@
 OPTS=""
 OPTS+="--id MUSIC "
 
-OPTS+="--list_train data/musicall_TrainS335_D65_f8fps_11k.csv "
-OPTS+="--list_val data/musicall_ValValS100_f8fps_11k.csv "
-#OPTS+="--list_val data/musicall_ValTestS130_f8fps_11k.csv "
+OPTS+="--list_train data/MUSIC_train.csv "
+OPTS+="--list_val data/MUSIC_val.csv "
+#OPTS+="--list_val data/MUSIC_test.csv "
 
 # Models
 #OPTS+="--arch_sound unet7 "                            #U-Net
