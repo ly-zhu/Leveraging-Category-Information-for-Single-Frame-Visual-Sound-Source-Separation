@@ -17,7 +17,7 @@ A PyTorch implementation of "Separating Sounds from a Single Image". Authors: [L
 	Python>=3.5, PyTorch>=0.4.0
 
 # Preparing the data
-Not released yet, but you can train the model on your own dataset for now by setting the following info:
+	#Not released yet, but you can train the model on your own dataset for now by setting the following info:
 	-Place the csv file lists under the folder data/, the csv file has the format as below: 
 		audio_path, frames_path, frames count
 	-Edit the dataset path at line 163 of file dataset/music.py
