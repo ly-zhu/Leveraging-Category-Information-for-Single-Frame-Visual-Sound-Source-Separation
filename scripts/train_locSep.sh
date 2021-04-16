@@ -9,7 +9,7 @@ OPTS+="--list_val data/MUSIC_val.csv "
 
 # Models
 #OPTS+="--arch_sound unet7 "                            #U-Net
-OPTS+="--arch_sound deeplabV3Plus_mobilenetv2 "         #DV3P
+OPTS+="--arch_sound deeplabV3Plus_mobilenetv2 "         #MV2
 #OPTS+="--arch_frame resnet18dilated "                  #Res-18
 OPTS+="--arch_frame resnet18dilated_50 "                #Res-50
 OPTS+="--arch_avol AVOL "
@@ -54,7 +54,7 @@ OPTS+="--num_val 256 "
 
 OPTS+="--ckpt ./ckpt_train_sep "
 #OPTS+="--ckpt ./ckpt_train_locSep "
-#OPTS+="--ckpt ./ckpt_train_GCEmb "
+#OPTS+="--ckpt ./ckpt_train_CatEmb "
 
 OPTS+="--dup_trainset 100 "
 OPTS+="--lamda 1.0 "
@@ -62,4 +62,4 @@ OPTS+="--dataset MUSIC "
 
 CUDA_VISIBLE_DEVICES="0" python -u main_Appearance_Sound.py $OPTS
 #CUDA_VISIBLE_DEVICES="0" python -u main_Appearance_att_Sound.py $OPTS
-#CUDA_VISIBLE_DEVICES="0" python -u main_GCEmb_Sound.py $OPTS
+#CUDA_VISIBLE_DEVICES="0" python -u main_CatEmb_Sound.py $OPTS

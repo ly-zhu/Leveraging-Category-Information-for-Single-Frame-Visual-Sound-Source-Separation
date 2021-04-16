@@ -3,16 +3,16 @@
 OPTS=""
 OPTS+="--mode eval "
 
-### A(Res-50) + S(DV3P)
-#OPTS+="--ckpt ./ckpt_res50_DV3P_MUSIC_N2_f1_binary_bs10_TrainS335_D65_ValValS100_ValTestS130_dup100_f8fps_11k "
+### A(Res-50) + S(MV2)
+#OPTS+="--ckpt ./ckpt_res50_MV2_MUSIC_N2_f1_binary_bs10_TrainS335_D65_ValValS100_ValTestS130_dup100_f8fps_11k "
 #OPTS+="--id MUSIC-2mix-LogFreq-resnet18dilated_50-deeplabV3Plus_mobilenetv2-frames1stride24-maxpool-binary-weightedLoss-channels11-epoch100-step40_80 "
 
-### A(Res-50, att) + S(DV3P)
-OPTS+="--ckpt ./ckpt_res50_att_DV3P_MUSIC_N2_f1_binary_bs10_TrainS335_D65_ValValS100_ValTestS130_dup100_f8fps_11k "
+### A(Res-50, att) + S(MV2)
+OPTS+="--ckpt ./ckpt_res50_att_MV2_MUSIC_N2_f1_binary_bs10_TrainS335_D65_ValValS100_ValTestS130_dup100_f8fps_11k "
 OPTS+="--id MUSIC-2mix-LogFreq-resnet18dilated_50-deeplabV3Plus_mobilenetv2-AVOL-frames1stride24-maxpool-binary-weightedLoss-channels11-epoch100-step40_80 "
 
-### A(Ground Category Emb) + S(DV3P)
-#OPTS+="--ckpt ./ckpt_GCEmb_DV3P_MUSIC_N2_f1_binary_bs10_TrainS335_D65_ValValS100_ValTestS130_dup100_f8fps_11k "
+### A(Ground Category Emb) + S(MV2)
+#OPTS+="--ckpt ./ckpt_GCEmb_MV2_MUSIC_N2_f1_binary_bs10_TrainS335_D65_ValValS100_ValTestS130_dup100_f8fps_11k "
 #OPTS+="--id MUSIC-2mix-LogFreq-deeplabV3Plus_mobilenetv2-frames1stride24-maxpool-binary-weightedLoss-channels11-epoch100-step40_80 "
 
 
@@ -22,10 +22,10 @@ OPTS+="--list_train data/MUSIC_train.csv "
 OPTS+="--list_val data/MUSIC_test.csv "
 
 # Models
-#OPTS+="--arch_sound unet7 "				#U-Net
-OPTS+="--arch_sound deeplabV3Plus_mobilenetv2 "		#DV3P
-#OPTS+="--arch_frame resnet18dilated " 			#Res-18
-OPTS+="--arch_frame resnet18dilated_50 "		#Res-50
+#OPTS+="--arch_sound unet7 "				        #U-Net
+OPTS+="--arch_sound deeplabV3Plus_mobilenetv2 "		#MV2
+#OPTS+="--arch_frame resnet18dilated " 			    #Res-18
+OPTS+="--arch_frame resnet18dilated_50 "		    #Res-50
 OPTS+="--arch_avol AVOL "
 OPTS+="--img_pool maxpool "
 OPTS+="--num_channels 11 "
@@ -57,4 +57,4 @@ OPTS+="--num_vis 200 "
 
 #CUDA_VISIBLE_DEVICES="0" python -u main_Appearance_Sound.py $OPTS
 CUDA_VISIBLE_DEVICES="0" python -u main_Appearance_att_Sound.py $OPTS
-#CUDA_VISIBLE_DEVICES="0" python -u main_GCEmb_Sound.py $OPTS
+#CUDA_VISIBLE_DEVICES="0" python -u main_CatEmb_Sound.py $OPTS
