@@ -1,16 +1,16 @@
-# Separating-Sounds-from-a-Single-Image
+# Leveraging-Category-Information-for-Single-Frame-Visual-Sound-Source-Separation
 
 [Paper](https://arxiv.org/pdf/2007.07984.pdf) | [project](https://ly-zhu.github.io/separating-sounds-from-single-image)
 
-A PyTorch implementation of "Separating Sounds from a Single Image". Authors: [Lingyu Zhu](https://ly-zhu.github.io) and [Esa Rahtu](http://esa.rahtu.fi). Tampere University, Finland.
+A PyTorch implementation of "Leveraging Category Information for Single-Frame Visual Sound Source Separation". Authors: [Lingyu Zhu](https://ly-zhu.github.io) and [Esa Rahtu](http://esa.rahtu.fi). Tampere University, Finland.
 
 <img src="figures/locSep3_MUSIC.png" width="800"/>
 
 <!-- ## Examples of Sound Source Separation
-<img src="separating-sounds-from-single-image/figures/locSep_vis_MUSIC.png" width="800"/>
+<img src="Leveraging-Category-Information-for-Single-Frame-Visual-Sound-Source-Separation/figures/locSep_vis_MUSIC.png" width="800"/>
 
 ## Examples of Sound Source Localization
-<img src="separating-sounds-from-single-image/figures/loc_vis_MUSIC_res50_dv3p.png" width="800"/>
+<img src="Leveraging-Category-Information-for-Single-Frame-Visual-Sound-Source-Separation/figures/loc_vis_MUSIC_res50_dv3p.png" width="800"/>
 -->
 
 # Environment
@@ -27,14 +27,14 @@ A PyTorch implementation of "Separating Sounds from a Single Image". Authors: [L
 Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh and scripts/eval_locSep.sh to switch to diffeent appearance and sound networks.
 
 # Training
-	# Training the A(Res-50) + S(DV3P) model
+	# Training the A(Res-50) + S(MV2) model
 	./scripts/train_locSep.sh
 
-	# Training the A(Res-50, att) + S(DV3P) model
-	-The network A(Res-50, att) + S(DV3P) is trained based on A(Res-50) + S(DV3P). 
+	# Training the A(Res-50, att) + S(MV2) model
+	-The network A(Res-50, att) + S(MV2) is trained based on A(Res-50) + S(MV2). 
 	-Uncomment the line of "CUDA_VISIBLE_DEVICES="0" python -u main_Appearance_att_Sound.py $OPTS" in scripts/train_locSep.sh to start the training.
 
-	# Training the A(Ground Category Emb) + S(DV3P) model
+	# Training the A(CatEmb) + S(MV2) model
 	-Uncomment the line of "CUDA_VISIBLE_DEVICES="0" python -u main_GCEmb_Sound.py $OPTS" in scripts/train_locSep.sh to start the training.
 
 
