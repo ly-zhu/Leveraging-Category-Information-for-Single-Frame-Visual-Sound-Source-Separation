@@ -1,6 +1,6 @@
 # Leveraging-Category-Information-for-Single-Frame-Visual-Sound-Source-Separation
 
-[Paper](https://arxiv.org/pdf/2007.07984.pdf) | [project](https://ly-zhu.github.io/separating-sounds-from-single-image)
+[Paper](https://arxiv.org/pdf/2007.07984.pdf) | [project](https://ly-zhu.github.io/leveraging-category-information-for-single-frame-visual-sound-source-separation)
 
 A PyTorch implementation of "Leveraging Category Information for Single-Frame Visual Sound Source Separation". Authors: [Lingyu Zhu](https://ly-zhu.github.io) and [Esa Rahtu](http://esa.rahtu.fi). Tampere University, Finland.
 
@@ -51,13 +51,13 @@ Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh and scripts
 
 ## Citation
 ```bibtex   
-    @misc{zhu2020separating,
-    title={Separating Sounds from a Single Image},
-    author={Lingyu Zhu and Esa Rahtu},
-    year={2020},
-    eprint={2007.07984},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@misc{zhu2021leveraging,
+      title={Leveraging Category Information for Single-Frame Visual Sound Source Separation}, 
+      author={Lingyu Zhu and Esa Rahtu},
+      year={2021},
+      eprint={2007.07984},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
