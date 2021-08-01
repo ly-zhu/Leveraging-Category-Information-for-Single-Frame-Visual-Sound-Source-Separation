@@ -51,13 +51,13 @@ Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh and scripts
 
 ## Citation
 ```bibtex   
-@misc{zhu2021leveraging,
-      title={Leveraging Category Information for Single-Frame Visual Sound Source Separation}, 
-      author={Lingyu Zhu and Esa Rahtu},
-      year={2021},
-      eprint={2007.07984},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{zhu2021leveraging,
+  title={Leveraging Category Information for Single-Frame Visual Sound Source Separation},
+  author={Zhu, Lingyu and Rahtu, Esa},
+  booktitle={2021 9th European Workshop on Visual Information Processing (EUVIP)},
+  pages={1--6},
+  year={2021},
+  organization={IEEE}
 }
 ```
 
