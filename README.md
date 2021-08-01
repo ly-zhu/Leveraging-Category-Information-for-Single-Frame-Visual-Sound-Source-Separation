@@ -45,9 +45,11 @@ Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh and scripts
 
 # Reference
 
-[1] Zhao, Hang, et al. "The sound of pixels." Proceedings of the European conference on computer vision (ECCV). 2018.
+[1] Zhu, Lingyu, and Esa Rahtu. "Visually guided sound source separation using cascaded opponent filter network." Proceedings of the Asian Conference on Computer Vision (ACCV). 2020.
 
-[2] Arandjelovic, Relja, and Andrew Zisserman. "Objects that sound." Proceedings of the European Conference on Computer Vision (ECCV). 2018.
+[2] Zhao, Hang, et al. "The sound of pixels." Proceedings of the European conference on computer vision (ECCV). 2018.
+
+[3] Arandjelovic, Relja, and Andrew Zisserman. "Objects that sound." Proceedings of the European Conference on Computer Vision (ECCV). 2018.
 
 ## Citation
 ```bibtex   
