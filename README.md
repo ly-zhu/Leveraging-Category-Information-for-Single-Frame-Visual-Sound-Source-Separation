@@ -52,6 +52,10 @@ Replace the --arch_frame and --arch_sound in scripts/train_locSep.sh and scripts
 [3] Arandjelovic, Relja, and Andrew Zisserman. "Objects that sound." Proceedings of the European Conference on Computer Vision (ECCV). 2018.
 
 ## Citation
+
+If you find this work useful in your research, please cite:
+
+
 ```bibtex   
 @inproceedings{zhu2021leveraging,
   title={Leveraging Category Information for Single-Frame Visual Sound Source Separation},
